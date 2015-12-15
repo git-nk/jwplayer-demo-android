@@ -16,8 +16,17 @@
             android:layout_height="wrap_content"/>
 
         <RelativeLayout
+            android:id="@+id/landscape_view"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#88FFFFFF">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="@string/app_name"
+                android:textColor="@android:color/black"/>
 
         </RelativeLayout>
 

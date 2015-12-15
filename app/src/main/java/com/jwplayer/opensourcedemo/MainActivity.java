@@ -29,6 +29,7 @@ public class MainActivity extends FragmentActivity implements VideoPlayerEvents.
      */
     private JWEventHandler mEventHandler;
     private RelativeLayout mPlayerContainer;
+    private View mViewLandscape;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class MainActivity extends FragmentActivity implements VideoPlayerEvents.
         setContentView(R.layout.activity_main);
         mPlayerView = (JWPlayerView) findViewById(R.id.jwplayer);
         mPlayerContainer = (RelativeLayout) findViewById(R.id.player_container);
+        mViewLandscape = findViewById(R.id.landscape_view);
         TextView outputTextView = (TextView) findViewById(R.id.output);
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
@@ -91,6 +93,7 @@ public class MainActivity extends FragmentActivity implements VideoPlayerEvents.
         mPlayerView.setFullscreen(true, true);
         mPlayerView.setLayoutParams(playerLayoutParam);
         mPlayerContainer.setLayoutParams(playerParentLayoutParam);
+        showLandscapeView(true);
     }
 
     private void addPortraitView() {
@@ -106,6 +109,11 @@ public class MainActivity extends FragmentActivity implements VideoPlayerEvents.
         }
         mPlayerView.setFullscreen(false, true);
         mPlayerView.setLayoutParams(playerLayoutParam);
+        showLandscapeView(false);
+    }
+
+    private void showLandscapeView(boolean show) {
+        mViewLandscape.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 
     @Override
