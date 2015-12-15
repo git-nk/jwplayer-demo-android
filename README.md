@@ -18,3 +18,12 @@ This application contains an example implementation of the JW Player SDK for And
 - Open the AndroidManifest.xml file and replace {YOUR_LICENSE_KEY} with your license key
 
 The demo application should now build and run.
+
+######## Modifications:
+- for license : use jw_license key in strings.xml
+- To remove compilation error provide following info:
+  - Create a class com.jwplayer.opensourcedemo.Consts
+  - Provide values for
+    - VIDEO_URL : valid video url
+    - JWPLAYER_SKIN : valid url for skin css
+    - JWPLAYER_SKIN_NAME : name of skin
