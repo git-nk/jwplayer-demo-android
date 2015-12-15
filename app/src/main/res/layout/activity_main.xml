@@ -1,17 +1,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/gray"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray"
+              android:orientation="vertical">
 
-    <com.longtailvideo.jwplayer.JWPlayerView
-        xmlns:jwp="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/jwplayer"
+    <RelativeLayout
+        android:id="@+id/player_container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="wrap_content"
+        android:background="@color/gray">
+
+        <com.longtailvideo.jwplayer.JWPlayerView
+            android:id="@+id/jwplayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,6 +34,6 @@
             android:layout_height="wrap_content"
             android:paddingLeft="16dp"
             android:paddingTop="16dp"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"/>
     </RelativeLayout>
 </LinearLayout>
