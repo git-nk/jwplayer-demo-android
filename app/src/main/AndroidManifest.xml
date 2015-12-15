@@ -19,7 +19,7 @@
         </activity>
         <meta-data
             android:name="JW_LICENSE_KEY"
-            android:value="{YOUR_LICENSE_KEY}"/>
+            android:value="@string/jw_license"/>
     </application>
 
 </manifest>
